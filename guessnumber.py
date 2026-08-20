@@ -8,7 +8,12 @@ print("Welcome to the Game try to guess the same number as the Ai")
 
 
 while running:
-    player: int = int(input("Enter a number (1-10): "))
+    while True:
+        try:
+            player: int = int(input("Enter a number (1-10): "))
+            break
+        except ValueError:
+            print("This is not a Number! Please try again.")
 
 
     while player < 0 or player > 10:
